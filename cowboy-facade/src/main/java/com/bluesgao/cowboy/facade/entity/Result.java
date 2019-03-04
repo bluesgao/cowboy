@@ -15,6 +15,6 @@ import java.io.Serializable;
 public class Result<T> implements Serializable {
     private boolean isSuccess;//执行成功标志
     private int errorCode;//错误码
-    private int errorDesc;//错误码描述
+    private String errorDesc;//错误码描述
     private T data;//返回数据
 }
