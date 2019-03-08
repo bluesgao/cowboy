@@ -15,8 +15,8 @@ public class ArticleServiceImplTest {
     @Test
     public void post() {
         ArticleDetail input = new ArticleDetail();
-        input.setId(1);
-        input.setTitle("荷塘月色");
+        input.setId(2l);
+        input.setTitle("背影");
         input.setAuthorName("朱自清");
         articleService.post(input);
     }
@@ -27,5 +27,12 @@ public class ArticleServiceImplTest {
 
     @Test
     public void delete() {
+    }
+
+    @Test
+    public void list() {
+        ArticleDetail input = new ArticleDetail();
+        input.setAuthorName("朱自清");
+        articleService.list(input);
     }
 }

@@ -15,10 +15,10 @@ import java.util.List;
 @Setter
 @Getter
 public class ArticleDetail implements Serializable {
-    private long id;//文章id
+    private Long id;//文章id
     private String title;//文章名称
     private String authorName;//文章作者名称
-    private long authorId;//文章作者id
+    private Long authorId;//文章作者id
     private Date publishTime;//文章发布时间
     private List<String> tags;//文章标签
     private String content;//具体内容
