@@ -8,12 +8,12 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-@ToString
-@Setter
-@Getter
 /**
  * 文章详情
  */
+@ToString
+@Setter
+@Getter
 public class ArticleDetail implements Serializable {
     private long id;//文章id
     private String title;//文章名称

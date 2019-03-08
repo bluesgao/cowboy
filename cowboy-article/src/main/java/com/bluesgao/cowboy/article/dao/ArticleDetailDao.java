@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface ArticleDetailDao {
     boolean save(ArticleDetail articleDetail);
-    List<ArticleDetail> list();
+    List<ArticleDetail> list(ArticleDetail articleDetail);
 }
