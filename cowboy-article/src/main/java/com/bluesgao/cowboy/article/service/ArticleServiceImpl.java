@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.bluesgao.cowboy.article.dao.ArticleDao;
 import com.bluesgao.cowboy.article.entity.Article;
 import com.bluesgao.cowboy.facade.entity.CommonResult;
+import com.bluesgao.cowboy.facade.entity.article.ArticleRich;
 import com.bluesgao.cowboy.facade.entity.article.ArticleVo;
 import com.bluesgao.cowboy.facade.interfaces.article.ArticleService;
 import lombok.extern.slf4j.Slf4j;
@@ -64,5 +65,10 @@ public class ArticleServiceImpl implements ArticleService {
 
         log.info("list output:{}", JSON.toJSONString(commonResult));
         return commonResult;
+    }
+
+    public CommonResult<ArticleRich> detail(Long articleId) {
+        log.info("detail input:{}", articleId);
+        return null;
     }
 }
