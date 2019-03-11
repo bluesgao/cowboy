@@ -12,7 +12,7 @@ import java.io.Serializable;
 /**
  * 通用结果
  */
-public class Result<T> implements Serializable {
+public class CommonResult<T> implements Serializable {
     private boolean isSuccess;//执行成功标志
     private int errorCode;//错误码
     private String errorDesc;//错误码描述

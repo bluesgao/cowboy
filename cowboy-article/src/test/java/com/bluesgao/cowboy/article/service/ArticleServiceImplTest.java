@@ -1,6 +1,6 @@
 package com.bluesgao.cowboy.article.service;
 
-import com.bluesgao.cowboy.facade.entity.article.ArticleDetail;
+import com.bluesgao.cowboy.facade.entity.article.ArticleVo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ public class ArticleServiceImplTest {
     private ArticleServiceImpl articleService;
     @Test
     public void post() {
-        ArticleDetail input = new ArticleDetail();
+        ArticleVo input = new ArticleVo();
         input.setId(2l);
         input.setTitle("背影");
         input.setAuthorName("朱自清");
@@ -31,7 +31,7 @@ public class ArticleServiceImplTest {
 
     @Test
     public void list() {
-        ArticleDetail input = new ArticleDetail();
+        ArticleVo input = new ArticleVo();
         input.setAuthorName("朱自清");
         articleService.list(input);
     }

@@ -1,16 +1,16 @@
 package com.bluesgao.cowboy.facade.interfaces.article;
 
-import com.bluesgao.cowboy.facade.entity.Result;
-import com.bluesgao.cowboy.facade.entity.article.ArticleDetail;
+import com.bluesgao.cowboy.facade.entity.CommonResult;
+import com.bluesgao.cowboy.facade.entity.article.ArticleVo;
 
 import java.util.List;
 
 public interface ArticleService {
-    Result<Boolean> post(ArticleDetail articleDetail);//发布
+    CommonResult<Boolean> post(ArticleVo articleVo);//发布
 
     void draft();//草稿（用户客户端实现比较合理）
 
-    Result<Boolean> delete(Long userId, Long articleId);//删除
+    CommonResult<Boolean> delete(Long userId, Long articleId);//删除
 
-    Result<List<ArticleDetail>> list(ArticleDetail articleDetail);//列表
+    CommonResult<List<ArticleVo>> list(ArticleVo articleVo);//列表
 }

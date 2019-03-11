@@ -12,7 +12,7 @@ import java.io.Serializable;
 /**
  * 文章统计信息
  */
-public class ArticleStatistic implements Serializable {
+public class ArticleStatisticVo implements Serializable {
     private long articleId;//文章id
     private long view;//查看
     private long like;//喜欢

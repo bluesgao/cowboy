@@ -1,4 +1,4 @@
-package com.bluesgao.cowboy.facade.entity.article;
+package com.bluesgao.cowboy.article.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,13 +8,13 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-@ToString
-@Setter
-@Getter
 /**
  * 文章详情
  */
-public class ArticleDetail implements Serializable {
+@ToString
+@Setter
+@Getter
+public class Article implements Serializable {
     private Long id;//文章id
     private String title;//文章名称
     private String authorName;//文章作者名称

@@ -1,4 +1,4 @@
-package com.bluesgao.cowboy.facade.entity.article;
+package com.bluesgao.cowboy.article.entity;
 
 import lombok.Getter;
 import lombok.Setter;

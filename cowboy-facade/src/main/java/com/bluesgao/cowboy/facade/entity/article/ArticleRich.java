@@ -10,8 +10,7 @@ import java.io.Serializable;
 @Setter
 @ToString
 public class ArticleRich implements Serializable {
-    private ArticleBasic articleBasic;
-    private ArticleDetail articleDetail;
-    private ArticleComment articleComment;
-    private ArticleStatistic articleStatistic;
+    private ArticleVo articleVo;
+    private ArticleCommentVo articleCommentVo;
+    private ArticleStatisticVo articleStatisticVo;
 }
