@@ -10,6 +10,6 @@ import java.io.Serializable;
 @Setter
 @ToString
 public class UserRich implements Serializable {
-    private UserBasic userBasic;
-    private UserDegree userDegree;
+    private UserVo userVo;
+    private UserDegreeVo userDegreeVo;
 }

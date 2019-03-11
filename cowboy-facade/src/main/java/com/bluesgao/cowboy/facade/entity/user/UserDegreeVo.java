@@ -9,7 +9,7 @@ import java.io.Serializable;
 @ToString
 @Setter
 @Getter
-public class UserDegree implements Serializable {
+public class UserDegreeVo implements Serializable {
     private String id;
     private int degree;
     private String degreeDesc;
