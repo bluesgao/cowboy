@@ -9,6 +9,8 @@ import java.util.List;
 public interface ArticleService {
     CommonResult<Boolean> post(ArticleVo articleVo);//发布
 
+    CommonResult<Boolean> edit(ArticleVo articleVo);//编辑
+
     void draft();//草稿（用户客户端实现比较合理）
 
     CommonResult<Boolean> delete(Long userId, Long articleId);//删除

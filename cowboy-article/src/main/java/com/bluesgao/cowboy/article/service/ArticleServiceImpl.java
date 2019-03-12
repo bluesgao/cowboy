@@ -28,17 +28,34 @@ public class ArticleServiceImpl implements ArticleService {
         BeanUtils.copyProperties(articleVo, input);
         Boolean ret = articleDao.save(input);
         if (ret) {
-            commonResult.setSuccess(true);
+            commonResult.setCode(0);
             commonResult.setData(articleVo);
-            commonResult.setErrorCode(0);
-            commonResult.setErrorDesc("插入成功");
+            commonResult.setMsg("发布成功");
         } else {
-            commonResult.setSuccess(false);
             commonResult.setData(articleVo);
-            commonResult.setErrorCode(1);
-            commonResult.setErrorDesc("插入失败");
+            commonResult.setCode(1);
+            commonResult.setMsg("发布失败");
         }
         log.info("post output:{}", JSON.toJSONString(commonResult));
+        return commonResult;
+    }
+
+    public CommonResult<Boolean> edit(ArticleVo articleVo) {
+        log.info("edit input:{}", JSON.toJSONString(articleVo));
+        CommonResult commonResult = new CommonResult<Boolean>();
+        Article input = new Article();
+        BeanUtils.copyProperties(articleVo, input);
+        Boolean ret = articleDao.edit(input);
+        if (ret) {
+            commonResult.setData(articleVo);
+            commonResult.setCode(0);
+            commonResult.setMsg("编辑成功");
+        } else {
+            commonResult.setData(articleVo);
+            commonResult.setCode(1);
+            commonResult.setMsg("编辑失败");
+        }
+        log.info("edit output:{}", JSON.toJSONString(commonResult));
         return commonResult;
     }
 
@@ -58,10 +75,9 @@ public class ArticleServiceImpl implements ArticleService {
         BeanUtils.copyProperties(articleVo, input);
         List<Article> articles = articleDao.list(input);
         log.info("list articles:{}", JSON.toJSONString(articles));
-        commonResult.setSuccess(true);
         commonResult.setData(articles);
-        commonResult.setErrorCode(0);
-        commonResult.setErrorDesc("查询成功");
+        commonResult.setCode(0);
+        commonResult.setMsg("查询成功");
 
         log.info("list output:{}", JSON.toJSONString(commonResult));
         return commonResult;

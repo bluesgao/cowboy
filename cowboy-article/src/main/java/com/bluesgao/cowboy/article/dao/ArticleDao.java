@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface ArticleDao {
     boolean save(Article article);
+    boolean edit(Article article);
     List<Article> list(Article article);
 }
